@@ -17,6 +17,6 @@ class FlaskrTestCase(unittest.TestCase):
         self.assertEquals('{ "imie":"Adam","msg":"Witaj Swiecie!"}', rv.data)
 
     def test_msg_with_given_name(self):
-        i = 'Maria'
-        rv = self.app.get('/?output=json&imie=' + i)
-        self.assertEquals('{ "imie":"' + i + '","msg":"Witaj Swiecie!"}', rv.data)
+        imie_test = 'Maria'
+        rv = self.app.get('/?output=json&imie=' + imie_test)
+        self.assertEquals('{ "imie":"' + imie_test + '","msg":"Witaj Swiecie!"}', rv.data)
