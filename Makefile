@@ -32,7 +32,8 @@ docker_push: docker_build
 		docker push $(TAG); \
 		docker logout;
 
-cover:
-		-test_cov-generacja coverage
-		-test_xunit-generacja xunit i coverage
-		
+test_cov:
+		PYTHONPATH=. py.test --verbose -s --cov=.
+
+test_xunit:
+		PYTHONPATH=. py.test --verbose -s --cov=. --cov-report xml
