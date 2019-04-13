@@ -31,3 +31,8 @@ docker_push: docker_build
 		docker dpkg -l | grep docker $(TAG); \
 		docker push $(TAG); \
 		docker logout;
+
+cover:
+		-test_cov-generacja coverage
+		-test_xunit-generacja xunit i coverage
+		
