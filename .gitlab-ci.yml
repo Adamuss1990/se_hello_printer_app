@@ -10,6 +10,7 @@ test:
     - pip install -r test_requirements.txt
     - PYTHONPATH=. py.test --verbose -s
 
+
 docker:
   image: docker:stable
   service:
