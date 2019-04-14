@@ -7,10 +7,6 @@ deps:
 test:
 	PYTHONPATH=. py.test  --verbose -s
 
-make_d:
-	apk add --update make; \
-	make docker_build
-
 run:
 	python main.py
 
