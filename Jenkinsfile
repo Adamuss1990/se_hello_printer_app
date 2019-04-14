@@ -26,5 +26,11 @@ pipeline {
                     tools: [[$class: 'JUnitType', pattern: 'test_results.xml']]])
             }
         }
+        post {
+        always {
+          //Cobertura test coverage
+          step([$class: 'CoberturaPublisger', coberturaReportFile: 'Coberage.xml'])
+          }
+        }
     }
 }
