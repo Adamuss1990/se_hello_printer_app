@@ -11,10 +11,10 @@ run:
 	python main.py
 
 lint:
-	flake8 hello_world test
+	flake8 hello_world/
 
 docker_build:
-		docker build -t hello-world-printer .
+		docker build -t hello-world-printer_app .
 
 docker_run: docker_build
 		docker run \
