@@ -14,5 +14,4 @@ docker:
     - docker:dind
   stage: docker_build
   script:
-    - apk add --update make
-    - make docker_build
+    - make_d
